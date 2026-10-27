@@ -1,0 +1,2 @@
+# obsidian-zotero-researchvault
+codex联动zotreo和obsidian搭建个人知识库
