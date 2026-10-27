@@ -61,7 +61,8 @@ class GatewayTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.root = Path(self.tmp.name)
+        # Compare canonical paths even when Windows TEMP uses a short-name alias.
+        self.root = Path(self.tmp.name).resolve()
         self.vault = self.root / "New Research Vault"
         self.config = self.root / "config.toml"
         initialize(self.vault, self.config, with_codex=True)

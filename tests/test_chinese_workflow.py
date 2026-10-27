@@ -18,7 +18,8 @@ from validate_research_vault_literature_links import validate
 class ChineseWorkflow(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
-        self.v=Path(self.tmp.name)/'vault'
+        # Windows CI can expose TEMP through an 8.3 alias; runtime paths resolve it.
+        self.v=Path(self.tmp.name).resolve()/'vault'
         initialize(self.v,Path(self.tmp.name)/'config.toml',with_codex=True)
 
     def test_18_properties_and_hidden_identity_round_trip(self):
