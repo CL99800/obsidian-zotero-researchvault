@@ -1,0 +1,55 @@
+/* Journal badges: only the dedicated 期刊标签 property is styled. */
+body {
+  --rv-journal-row: rgba(42, 112, 173, 0.045);
+  --rv-journal-pill-bg: #e5f0fb;
+  --rv-journal-pill-fg: #1b527d;
+  --rv-journal-pill-border: #bdd7ee;
+}
+body.theme-dark {
+  --rv-journal-row: rgba(111, 175, 232, 0.055);
+  --rv-journal-pill-bg: #203e59;
+  --rv-journal-pill-fg: #d3e9fc;
+  --rv-journal-pill-border: #365d7e;
+}
+.metadata-property[data-property-key="期刊标签"] {
+  background: var(--rv-journal-row);
+  border-radius: 9px;
+  padding: 6px 8px;
+  margin-block: 3px;
+  --pill-color: var(--rv-journal-pill-fg);
+  --pill-color-hover: var(--rv-journal-pill-fg);
+  --pill-background: var(--rv-journal-pill-bg);
+  --pill-background-hover: var(--rv-journal-pill-bg);
+}
+.metadata-property[data-property-key="期刊标签"] .multi-select-container {
+  gap: 6px;
+  padding-block: 2px;
+}
+.metadata-property[data-property-key="期刊标签"] .multi-select-pill {
+  background: var(--rv-journal-pill-bg) !important;
+  color: var(--rv-journal-pill-fg) !important;
+  border: 1px solid var(--rv-journal-pill-border);
+  border-radius: 7px;
+  padding: 3px 9px;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 100%;
+  height: auto;
+}
+.metadata-property[data-property-key="期刊标签"] .multi-select-pill-content {
+  color: inherit !important;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.metadata-property[data-property-key="期刊标签"] .multi-select-pill-remove-button {
+  color: inherit;
+  opacity: 0.55;
+}
+
+/* Quiet grouped accents for the Chinese reading-note properties. */
+.metadata-property[data-property-key="标题"] { background: rgba(53,119,183,.055); border-radius:8px; }
+.metadata-property[data-property-key="标题"] .metadata-property-value { font-weight:600; }
+.metadata-property[data-property-key="标签"] .multi-select-pill { background:#e4f3ec !important; color:#245d48 !important; border-radius:7px; }
+.metadata-property:is([data-property-key="主题"],[data-property-key="研究对象"],[data-property-key="数据来源"],[data-property-key="研究方法"],[data-property-key="核心变量"],[data-property-key="主要发现"],[data-property-key="研究关联"]) { background:rgba(119,99,163,.035); border-radius:7px; margin-block:2px; }
+body.theme-dark .metadata-property[data-property-key="标签"] .multi-select-pill { background:#24483a !important; color:#cee9dd !important; }

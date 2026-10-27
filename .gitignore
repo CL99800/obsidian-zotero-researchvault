@@ -1,0 +1,27 @@
+# Local configuration and credentials
+config.toml*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Personal Vault contents
+/01知识图谱/
+/02阅读笔记/
+/03原始资料/
+/.obsidian/
+*.pdf
+*.sqlite
+*.sqlite-*
+*.zip
+*.log
+
+# Development artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db

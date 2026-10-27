@@ -1,0 +1,2 @@
+# Runtime CLI tools use the standard library; YAML is used by regression tests.
+PyYAML>=6,<7

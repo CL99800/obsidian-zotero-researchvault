@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Vault Retrieval"
+  short_description: "先检索精读笔记，不足时定向回到 Fulltext 或 Zotero PDF 原文取证"
+  default_prompt: "Use $research-vault-literature-retrieval for literature questions in the active ResearchVault. Search actual Analytical Notes first; assess whether they support every requested claim. Resolve exact Zotero identity, follow the matching Fulltext, and if it is absent or insufficient use accessible Zotero indexed text or original PDF for targeted verification. Never infer PDF pages or overwrite notes during ordinary retrieval."

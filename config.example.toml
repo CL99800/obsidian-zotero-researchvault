@@ -1,0 +1,16 @@
+# Copy to config.toml and edit paths for this machine.
+[paths]
+vault_root = ""
+zotero_data_dir = ""
+mineru_executable = ""
+archive_root = ""
+
+# Zotero Desktop must be running with its Local API enabled.
+[zotero]
+local_api_base = "http://127.0.0.1:23119/api"
+sqlite_readonly_fallback = true
+
+# Ordinary questions never write back to the Vault.
+[retrieval]
+notes_first = true
+zotero_fallback = true
